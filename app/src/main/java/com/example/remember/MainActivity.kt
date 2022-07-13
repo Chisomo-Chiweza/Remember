@@ -10,6 +10,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        homeBinding = HomeBinding.inflate(layoutInflater)
         val home = homeBinding.root
         setContentView(home)
     }
