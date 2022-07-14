@@ -7,22 +7,42 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        android:textColor="?attr/colorSecondary"
+        android:textSize="42sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/inter_bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.05" />
+
+    <TextView
         android:id="@+id/reminders"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/reminders"
+        android:textColor="?attr/colorSecondary"
+        android:textSize="18sp"
+        android:fontFamily="@font/inter_regular"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.29" />
+        app:layout_constraintVertical_bias="0.289" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/note_fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
+        app:backgroundTint="?attr/colorPrimary"
+        app:tint="?attr/colorOnPrimary"
         android:contentDescription="@string/add_note"
         android:src="@drawable/add_note"
         android:clickable="true"
@@ -36,6 +56,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
+        app:backgroundTint="?attr/colorPrimary"
+        app:tint="?attr/colorOnPrimary"
         android:contentDescription="@string/add_event"
         android:src="@drawable/add_event"
         android:focusable="true"
@@ -49,6 +71,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
+        app:backgroundTint="?attr/colorPrimary"
+        app:tint="?attr/colorOnPrimary"
         android:contentDescription="@string/add_task"
         android:src="@drawable/add_task"
         android:focusable="true"
