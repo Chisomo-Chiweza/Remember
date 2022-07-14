@@ -1,7 +1,7 @@
 <resources>
-    <string name="app_name">Remember</string>
+    <string name="app_name">Remember.</string>
     <string name="reminders">No reminders here!</string>
-    <string name="fab">Click to expand multiple actions</string>
+    <string name="fab">Expands to multiple actions</string>
     <string name="add_task">Add a task</string>
     <string name="add_event">Add an event</string>
     <string name="add_note">Add a note</string>
