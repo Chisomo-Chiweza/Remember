@@ -1,4 +1,4 @@
-package com.example.remember
+package com.example.remember.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
