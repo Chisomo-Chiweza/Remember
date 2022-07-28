@@ -2,8 +2,9 @@
 <resources>
     <color name="white">#FFFFFFFF</color>
     <color name="wild_sand">#F5F5F5</color>
+    <color name="silver">#C3C7C7</color>
     <color name="black_coral">#54626F</color>
-    <color name="outer_space">#2A3439</color>
     <color name="limed_spruce">#36454F</color>
+    <color name="outer_space">#2A3439</color>
     <color name="black">#FF000000</color>
 </resources>
