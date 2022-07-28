@@ -4,98 +4,59 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".ui.MainActivity">
 
     <TextView
-        android:id="@+id/heading"
+        android:id="@+id/greeting_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/app_name"
-        android:textColor="?attr/colorSecondary"
-        android:textSize="42sp"
-        android:textStyle="bold"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/heading"
+        android:textSize="32sp"
         android:fontFamily="@font/inter_bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.05" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/reminders"
+        android:id="@+id/greeting_body"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/reminders"
-        android:textColor="?attr/colorSecondary"
-        android:textSize="18sp"
-        android:fontFamily="@font/inter_regular"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/inter_semi_bold"
+        android:text="@string/subheading"
+        android:textColor="@color/silver"
+        android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.289" />
+        app:layout_constraintTop_toBottomOf="@+id/greeting_title"
+        tools:ignore="TextContrastCheck" />
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/note_fab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        app:backgroundTint="?attr/colorPrimary"
-        app:tint="?attr/colorOnPrimary"
-        android:contentDescription="@string/add_note"
-        android:src="@drawable/add_note"
-        android:clickable="true"
-        android:focusable="true"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toTopOf="@+id/event_fab"
-        app:layout_constraintEnd_toEndOf="@+id/event_fab" />
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/event_fab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        app:backgroundTint="?attr/colorPrimary"
-        app:tint="?attr/colorOnPrimary"
-        android:contentDescription="@string/add_event"
-        android:src="@drawable/add_event"
-        android:focusable="true"
-        android:clickable="true"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toTopOf="@+id/task_fab"
-        app:layout_constraintEnd_toEndOf="@+id/task_fab" />
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/task_fab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        app:backgroundTint="?attr/colorPrimary"
-        app:tint="?attr/colorOnPrimary"
-        android:contentDescription="@string/add_task"
-        android:src="@drawable/add_task"
-        android:focusable="true"
-        android:clickable="true"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toTopOf="@+id/fab"
-        app:layout_constraintEnd_toEndOf="@+id/fab" />
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <TextView
+        android:id="@+id/your_tasks"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp"
-        android:clickable="true"
-        android:contentDescription="@string/fab"
-        android:focusable="true"
-        android:src="@drawable/add"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:fontFamily="@font/inter_semi_bold"
+        android:text="@string/upcoming_tasks"
+        android:textAlignment="viewStart"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.954"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.976" />
+        app:layout_constraintTop_toBottomOf="@id/greeting_body" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/task_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginHorizontal="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/your_tasks"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:scrollbars="vertical"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

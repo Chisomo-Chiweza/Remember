@@ -1,8 +1,16 @@
 <resources>
-    <string name="app_name">Remember.</string>
-    <string name="reminders">No reminders here!</string>
-    <string name="fab">Expands to multiple actions</string>
-    <string name="add_task">Add a task</string>
-    <string name="add_event">Add an event</string>
-    <string name="add_note">Add a note</string>
+
+    <!-- App details -->
+    <string name="app_name">Remember</string>
+    <!-- Launcher Screen -->
+    <string name="title">Reminder.</string>
+    <!-- Home Screen -->
+    <string name="heading">Hello,</string>
+    <string name="subheading">Today\'s reminders.</string>
+    <!-- Tasks -->
+    <string name="upcoming_tasks">Upcoming tasks</string>
+    <string name="task_name">Task name here.</string>
+    <string name="due_date">Due Date</string>
+    <string name="status">STATUS</string>
+
 </resources>
